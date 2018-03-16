@@ -23,3 +23,15 @@ List of headless-browsers: https://gist.github.com/evandrix/3694955
 parallel operation with browsers:
       Web Driver Factory:https://github.com/barancev/webdriver-factory
       Example:https://github.com/barancev/selenium-training/blob/master/java-example/src/test/java/ru/stqa/training/selenium/TestBase.java
+
+Links of specifications
+- Specification CSS Selectors Level 2 -- https://www.w3.org/TR/CSS21/
+- Specification CSS Selectors Level 3 -- https://www.w3.org/TR/css3-selectors/
+
+Where we can use CSS Selectors Level 3 -- http://caniuse.com/#feat=css-sel3
+
+About CSS:
+http://www.cheetyr.com/css-selectors
+http://www.w3schools.com/cssref/css_selectors.asp
+https://www.simple-talk.com/dotnet/.net-framework/xpath,-css,-dom-and-selenium-the-rosetta-stone/ (poster)
+https://www.smashingmagazine.com/2009/07/css-3-cheat-sheet-pdf/ (poster, last page)
