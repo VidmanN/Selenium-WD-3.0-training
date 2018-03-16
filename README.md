@@ -35,3 +35,9 @@ http://www.cheetyr.com/css-selectors
 http://www.w3schools.com/cssref/css_selectors.asp
 https://www.simple-talk.com/dotnet/.net-framework/xpath,-css,-dom-and-selenium-the-rosetta-stone/ (poster)
 https://www.smashingmagazine.com/2009/07/css-3-cheat-sheet-pdf/ (poster, last page)
+
+- Specification XPath 1.0 -- https://www.w3.org/TR/xpath/
+
+About XPath:
+http://scraping.pro/5-best-xpath-cheat-sheets-and-quick-references/
+https://www.simple-talk.com/dotnet/net-framework/xpath-css-dom-and-selenium-the-rosetta-stone/ (poster)
