@@ -4,8 +4,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import ru.stqa.training.selenium.TestBase;
 
-public class Task_7_litecart_admin extends TestBase{
+public class Task_7_litecart_admin extends TestBase {
 
     @Test
     public void litecartAdmin() {

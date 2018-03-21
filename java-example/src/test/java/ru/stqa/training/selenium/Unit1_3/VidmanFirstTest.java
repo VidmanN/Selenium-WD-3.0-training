@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Unit1_3;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class VidmanTest {
+
+public class VidmanFirstTest {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -24,15 +25,15 @@ public class VidmanTest {
     @Test
     public void vidmanFirstTest() {
         driver.get("http://www.google.com");
-        driver.findElement(By.name("q")).sendKeys("vidman\n");
+        driver.findElement(By.name("q")).sendKeys("webdriver\n");
         driver.findElement(By.name("btnG")).click();
-        wait.until(titleIs("vidman - Поиск в Google"));
+        wait.until(titleIs("webdriver - Поиск в Google"));
     }
 
     @After
     public void stop() {
-        driver.quit();
-        driver = null;
+       driver.quit();
+       driver = null;
     }
 
 }

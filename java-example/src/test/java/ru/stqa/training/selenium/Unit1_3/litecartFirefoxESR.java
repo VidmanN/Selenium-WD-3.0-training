@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Unit1_3;
 
 import org.junit.After;
 import org.junit.Before;

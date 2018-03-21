@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Unit1_3;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class litecartChrome {
+public class VidmanTest {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -22,12 +22,11 @@ public class litecartChrome {
     }
 
     @Test
-    public void litecartTest() {
-        driver.get("http://localhost/litecart/admin/");
-        driver.findElement(By.name("username")).sendKeys("admin");
-        driver.findElement(By.name("password")).sendKeys("admin");
-        driver.findElement(By.name("login")).click();
-        wait.until(titleIs("My Store"));
+    public void vidmanFirstTest() {
+        driver.get("http://www.google.com");
+        driver.findElement(By.name("q")).sendKeys("vidman\n");
+        driver.findElement(By.name("btnG")).click();
+        wait.until(titleIs("vidman - Поиск в Google"));
     }
 
     @After
@@ -35,4 +34,5 @@ public class litecartChrome {
         driver.quit();
         driver = null;
     }
+
 }
