@@ -83,6 +83,7 @@ public class Task_10_check_product  extends TestBase {
                 //PART 1 - there is tag 's' for .regular-price element
                 Assert.assertTrue("There isn't the line-through (tag s) on product page", information.findElement(By.cssSelector("s.regular-price")).isEnabled());
                 rgb = information.findElement(By.cssSelector(".regular-price")).getCssValue("color");
+                //PART 2 - RGB
                 R = Color.fromString(rgb).getColor().getRed();
                 G = Color.fromString(rgb).getColor().getGreen();
                 B = Color.fromString(rgb).getColor().getBlue();

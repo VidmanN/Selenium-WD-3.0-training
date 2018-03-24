@@ -4,6 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestBase {
@@ -20,7 +23,14 @@ public class TestBase {
             return;
         }
 
-        driver = new ChromeDriver();
+        //Chrome
+        //driver = new ChromeDriver();
+        //FF
+        FirefoxOptions options = new FirefoxOptions().setLegacy(false);
+        driver = new FirefoxDriver(options);
+        //IE
+        //driver = new InternetExplorerDriver();
+
         tlDriver.set(driver);
         wait = new WebDriverWait(driver, 15);
 
