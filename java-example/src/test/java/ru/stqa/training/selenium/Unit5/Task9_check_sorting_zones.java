@@ -41,7 +41,7 @@ public class Task9_check_sorting_zones extends TestBase{
                 //ASCII code of letter
                 secondZoneASCII = (int) firstLetter;
 
-                Assert.assertTrue("Countries don't sorted by alphabet", firstZoneASCII <= secondZoneASCII);
+                Assert.assertTrue("Zones don't sorted by alphabet", firstZoneASCII <= secondZoneASCII);
             }
             /////////////--END---////////////////////////////////////
             driver.navigate().back();
