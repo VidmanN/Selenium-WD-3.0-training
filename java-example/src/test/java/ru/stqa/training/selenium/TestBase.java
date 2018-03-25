@@ -24,12 +24,12 @@ public class TestBase {
         }
 
         //Chrome
-        //driver = new ChromeDriver();
+        driver = new ChromeDriver();
         //FF
-        FirefoxOptions options = new FirefoxOptions().setLegacy(false);
-        driver = new FirefoxDriver(options);
+        /*FirefoxOptions options = new FirefoxOptions().setLegacy(false);
+        driver = new FirefoxDriver(options);*/
         //IE
-        //driver = new InternetExplorerDriver();
+       // driver = new InternetExplorerDriver();
 
         tlDriver.set(driver);
         wait = new WebDriverWait(driver, 15);
