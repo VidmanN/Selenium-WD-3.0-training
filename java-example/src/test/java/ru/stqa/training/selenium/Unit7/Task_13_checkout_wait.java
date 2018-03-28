@@ -22,7 +22,7 @@ public class Task_13_checkout_wait extends TestBase {
     }
 
     @Test
-    public void litecartUserRegistration1() {
+    public void litecartWorkWithCart() {
         int count =3; //we will add this count of products to cart
 
         //--------------------Add products to cart----------------------------------------------------------------------
