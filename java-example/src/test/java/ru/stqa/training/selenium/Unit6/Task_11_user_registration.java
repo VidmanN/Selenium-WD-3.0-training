@@ -35,7 +35,8 @@ public class Task_11_user_registration extends TestBase{
         selectCountry.selectByValue("US");
 
         JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].selectedIdex = 10; arguments[0].dispatchEvent(new Event(\"change\"));",driver.findElement(By.cssSelector("select[name=zone_code]")));
+        executor.executeScript("arguments[0].selectedIdex = 5; arguments[0].dispatchEvent(new Event('change'));",
+                driver.findElement(By.cssSelector("select[name=zone_code]")));
 
         driver.findElement(By.cssSelector("input[name='email']")).sendKeys("test"+uniqueIndex+"@email.com" + Keys.ENTER);//Email
         driver.findElement(By.cssSelector("input[name='phone']")).sendKeys(Keys.HOME + "+7809500"+uniqueIndex+"" + Keys.ENTER);//Phone
@@ -45,11 +46,9 @@ public class Task_11_user_registration extends TestBase{
         }
 
         driver.findElement(By.cssSelector("input[name='password']")).sendKeys("pass"+uniqueIndex+"" + Keys.ENTER);//Desired Password
-        driver.findElement(By.cssSelector("input[name='confirmed_password']")).sendKeys("pass"+uniqueIndex+"" + Keys.ENTER);//Confirm Password
+        driver.findElement(By.cssSelector("input[name='confirmed_password']")).sendKeys("pass"+uniqueIndex+"");//Confirm Password
 
-
-        //executor.executeScript("arguments[0].onclick = true;",driver.findElement(By.cssSelector("button[name=create_account]")));
-        driver.findElement(By.cssSelector("[type=submit]")).click();
+        driver.findElement(By.cssSelector("button[name='create_account']")).click();
 
         wait.until(ExpectedConditions.urlContains("http://localhost/litecart/en"));
         Assert.assertTrue("Registration isn't success!",(driver.findElement(By.cssSelector("div.notice.success")).getText().equals("Your customer account has been created.")));
@@ -59,8 +58,9 @@ public class Task_11_user_registration extends TestBase{
         driver.findElement(By.xpath("//a[contains(text(),'Logout')]")).click();
         //--------------Log In-----------------
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[name=email]")));
-        driver.findElement(By.cssSelector("input[name=email]")).clear();
-        driver.findElement(By.cssSelector("input[name=email]")).sendKeys("test"+uniqueIndex+"@email.com" + Keys.ENTER);//Email Address
-        executor.executeScript("arguments[0].value = \"pass"+uniqueIndex+"\"; arguments[0].dispatchEvent(new Event(\"change\"))",driver.findElement(By.cssSelector("input[name=password]")));
+        driver.findElement(By.name("email")).clear();
+        driver.findElement(By.name("email")).sendKeys("test"+uniqueIndex+"@email.com");//Email Address
+        driver.findElement(By.name("password")).clear();
+        driver.findElement(By.name("password")).sendKeys("pass"+uniqueIndex+""+ Keys.ENTER);//Password
     }
 }
