@@ -29,7 +29,7 @@ public class TestBase {
         /*FirefoxOptions options = new FirefoxOptions().setLegacy(false);
         driver = new FirefoxDriver(options);*/
         //IE
-       // driver = new InternetExplorerDriver();
+      //driver = new InternetExplorerDriver();
 
         tlDriver.set(driver);
         wait = new WebDriverWait(driver, 15);
