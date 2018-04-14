@@ -89,7 +89,7 @@ public class TestBase {
         //--------------------------------------------------------
 
         //Chrome
-        driver = new EventFiringWebDriver(new ChromeDriver(caps));
+        driver = new EventFiringWebDriver(new ChromeDriver()); //caps
         //driver = new EventFiringWebDriver(new ChromeDriver(capabilities)); // driver with capabilities
         //FF
         /*FirefoxOptions options = new FirefoxOptions().setLegacy(false);

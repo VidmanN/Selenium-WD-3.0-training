@@ -22,6 +22,10 @@ public class MainPage extends Page {
     private List<WebElement> products;
 
     @FindBy(css = "#cart > a.link")
-    private WebElement toCart;
+    public WebElement goCart;
+
+    public WebElement firstProduct() {
+        return this.products.get(0);
+    }
 
 }
